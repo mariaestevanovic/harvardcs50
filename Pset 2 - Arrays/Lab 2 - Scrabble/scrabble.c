@@ -10,15 +10,12 @@ int compute_score(string word);
 
 int main(void)
 {
-    // get input words from both players
     string word1 = get_string("Player 1: ");
     string word2 = get_string("Player 2: ");
 
-    // score both words
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    // print the winner
     if (score1 > score2)
     {
         printf("Player 1 wins!\n");
@@ -41,7 +38,6 @@ int compute_score(string word)
 {
     score = 0;
 
-    // compute and return score for string
     for (i = 0, lenght = strlen(word); i < lenght; i++)
     {
         if (isupper(word[i]))
